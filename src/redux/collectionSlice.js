@@ -7,6 +7,7 @@ const initialState = {
   status: null,
   current_photo: [],
   current_page: 1,
+  order_by: "latest",
   per_page: 5,
 };
 
@@ -14,8 +15,9 @@ export const fetchPhotos = createAsyncThunk(
   "fetchPhotos",
   async (_, { rejectWithValue, dispatch, getState }) => {
     let page = getState().collection.current_page;
+    let order_by = getState().collection.order_by;
     const response = await unsplashAPI.get(
-      `/photos?per_page=${initialState.per_page}&page=${page}`
+      `/photos?per_page=${initialState.per_page}&page=${page}&order_by=${order_by}`
     );
     dispatch(setPhotos(response.data));
   }
@@ -50,6 +52,9 @@ export const collectionSlice = createSlice({
     setCurrentImage: (state, action) => {
       state.current_photo = action.payload;
     },
+    setOrderBy: (state, action) => {
+      state.order_by = action.payload;
+    },
     setPage: (state, action) => {
       state.current_page = action.payload;
     },
@@ -68,7 +73,12 @@ export const collectionSlice = createSlice({
   },
 });
 
-export const { setPhotos, setCollectionPhotos, setCurrentPhoto, setPage } =
-  collectionSlice.actions;
+export const {
+  setPhotos,
+  setCollectionPhotos,
+  setOrderBy,
+  setCurrentPhoto,
+  setPage,
+} = collectionSlice.actions;
 
 export default collectionSlice.reducer;

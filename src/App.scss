@@ -7,7 +7,15 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: $main-color;
 }
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
 
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 a {
   display: block;
   text-decoration: none;

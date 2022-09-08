@@ -1,6 +1,7 @@
 import React from "react";
 
 import Hero from "../../components/hero";
+import About from "../../components/about";
 import Grid from "../../components/grid";
 import Collection from "../../components/collection";
 import Subscription from "../../components/subscription";
@@ -10,6 +11,7 @@ export default function MainPage() {
   return (
     <React.Fragment>
       <Hero />
+      <About />
       <Grid />
       <Collection />
       <Subscription />
