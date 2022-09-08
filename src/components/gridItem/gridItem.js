@@ -1,8 +1,12 @@
 import style from "./gridItem.module.scss";
-
 import ImageListItem from "@mui/material/ImageListItem";
 import { gridPattern } from "../../assets/gridPattern";
+import { useSelector } from "react-redux";
+import Skeleton from "@mui/material/Skeleton";
+
 export default function GridItem({ src, alt, userName, userBio, index }) {
+  let status = useSelector((state) => state.collection.status);
+
   return (
     <ImageListItem
       cols={
@@ -17,13 +21,20 @@ export default function GridItem({ src, alt, userName, userBio, index }) {
       }
       className={style.gridItem}
     >
-      <img alt={alt} src={src} className={style.image} />
+      {status === "pending" ? (
+        <Skeleton
+          sx={{ bgcolor: "grey.700" }}
+          variant="rectangular"
+          height="100%"
+          animation="wave"
+        />
+      ) : (
+        <img alt={alt} src={src} className={style.image} />
+      )}
+
       <div className={style.overlay}>
-        <div class={style.textWrapper}>
+        <div className={style.textWrapper}>
           <p className={style.userName}>{userName}</p>
-          <p className={style.userBio}>
-            {userBio.length > 60 ? userBio.slice(0, 60) + "..." : userBio}
-          </p>
         </div>
       </div>
     </ImageListItem>

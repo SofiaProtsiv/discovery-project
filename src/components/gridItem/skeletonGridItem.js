@@ -18,17 +18,12 @@ export default function SkeletonGridItem({ src, id, index }) {
         ].rows
       }
     >
-      <div className={style.imageWrapper}>
-        <Skeleton
-          sx={{ bgcolor: "grey.700" }}
-          variant="rectangular"
-          height="100%"
-          animation="wave"
-        />
-        <div className={style.overlay}>
-          <div className={style.text}></div>
-        </div>
-      </div>
+      <Skeleton
+        sx={{ bgcolor: "grey.700" }}
+        variant="rectangular"
+        height="100%"
+        animation="wave"
+      />
     </ImageListItem>
   );
 }

@@ -4,17 +4,28 @@
   background-image: linear-gradient(to bottom, transparent, #23262f);
   padding: 50px 0;
 }
+
 .wrapperConatiner {
-  display: flex;
-  justify-content: space-between;
+  display: block;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .wrapper {
-  width: calc(25% - 120px);
-  margin-right: 120px;
-  margin-top: 25px;
+  width: 100%;
+  @media screen and (min-width: $desktop) {
+    width: calc(25% - 120px);
+    margin-right: 120px;
+    margin-top: 25px;
+  }
 }
 .wrapperGrid {
-  width: 75%;
+  width: 100%;
+  @media screen and (min-width: $desktop) {
+    width: 75%;
+  }
 }
 .title {
   color: $white-color;
@@ -29,5 +40,5 @@
   font-size: 12px;
 }
 .page {
-  color: aliceblue;
+  color: $white-color;
 }

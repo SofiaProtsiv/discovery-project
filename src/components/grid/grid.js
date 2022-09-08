@@ -31,13 +31,7 @@ export default function Grid() {
           </div>
           <div className={style.wrapperGrid}>
             <GridNav />
-            <ImageList
-              variant="quilted"
-              cols={3}
-              rowHeight={250}
-              gap={50}
-              className={style.grid}
-            >
+            <ImageList variant="quilted" cols={3} rowHeight={250} gap={50}>
               {photos.length > 0
                 ? photos.map((photo, index) => (
                     <GridItem
