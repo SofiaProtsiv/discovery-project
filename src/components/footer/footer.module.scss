@@ -1,8 +1,12 @@
 @import "../../assets/variables.scss";
 
 .container {
-  padding: 5px 0;
   background-color: $accent-color;
+  padding: 30px;
+
+  @media screen and (min-width: $tablet) {
+    padding: 20px 50px;
+  }
 }
 
 .footer {

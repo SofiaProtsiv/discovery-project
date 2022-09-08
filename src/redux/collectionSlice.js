@@ -3,6 +3,7 @@ import unsplashAPI from "../assets/api";
 
 const initialState = {
   photos: [],
+  collectionPhotos: [],
   status: null,
   current_photo: [],
   current_page: 1,
@@ -24,7 +25,7 @@ export const fetchPhotosCollection = createAsyncThunk(
     const response = await unsplashAPI.get(
       `/search/collections?query=mountain&per_page=3}`
     );
-    dispatch(setPhotos(response.data.results));
+    dispatch(setCollectionPhotos(response.data.results));
   }
 );
 export const fetchPhotoById = createAsyncThunk(
@@ -41,6 +42,9 @@ export const collectionSlice = createSlice({
   reducers: {
     setPhotos: (state, action) => {
       state.photos = action.payload;
+    },
+    setCollectionPhotos: (state, action) => {
+      state.collectionPhotos = action.payload;
     },
     setCurrentImage: (state, action) => {
       state.current_photo = action.payload;
@@ -60,6 +64,7 @@ export const collectionSlice = createSlice({
   },
 });
 
-export const { setPhotos, setCurrentPhoto } = collectionSlice.actions;
+export const { setPhotos, setCollectionPhotos, setCurrentPhoto } =
+  collectionSlice.actions;
 
 export default collectionSlice.reducer;

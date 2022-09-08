@@ -1,0 +1,33 @@
+@import "../../assets/variables.scss";
+.section {
+  background-color: $main-color;
+  background-image: linear-gradient(to bottom, transparent, #23262f);
+  padding: 50px 0;
+}
+.wrapperConatiner {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper {
+  width: calc(25% - 120px);
+  margin-right: 120px;
+  margin-top: 25px;
+}
+.wrapperGrid {
+  width: 75%;
+}
+.title {
+  color: $white-color;
+  text-align: end;
+  margin-bottom: 25px;
+  font-size: 22px;
+  font-weight: 900;
+}
+.subtitle {
+  color: $white-color;
+  text-align: end;
+  font-size: 12px;
+}
+.page {
+  color: aliceblue;
+}

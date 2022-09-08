@@ -9,7 +9,7 @@ export default function Subscription() {
       <div className={style.container}>
         <div className={style.image}></div>
         <div className={style.wrapper}>
-          <h3 className={style.title}>Subscribe to our news letter</h3>
+          <h2 className={style.title}>Subscribe to our news letter</h2>
           <div className={style.inputWrapper}>
             <input placeholder="Your email" className={style.input} />
             <Button buttonName="Subscribe" />

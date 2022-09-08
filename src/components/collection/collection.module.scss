@@ -5,10 +5,10 @@
     url("../../assets/mountains-bg.jpg");
   background-repeat: no-repeat;
 
-  padding: 20px 0;
+  padding: 30px 0;
 
   @media screen and (min-width: $tablet) {
-    padding: 30px 0;
+    padding: 70px 0;
   }
 }
 .container {
@@ -132,4 +132,9 @@
 .item button {
   position: absolute;
   bottom: 70px;
+}
+.emptyDiv {
+  width: 300px;
+  height: 300px;
+  background-color: $light-grey-color;
 }

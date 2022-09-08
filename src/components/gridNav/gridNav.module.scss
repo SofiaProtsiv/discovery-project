@@ -1,0 +1,27 @@
+@import "../../assets/variables.scss";
+
+.navContainer {
+  position: relative;
+  display: flex;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.buttonsWrapper {
+  display: flex;
+}
+.buttonsWrapper button {
+  padding: 10px 12px;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 900;
+  border: none;
+  &:first-child {
+    margin-right: 10px;
+  }
+}
+.dropDownList {
+}
+.page {
+  color: $white-color;
+}

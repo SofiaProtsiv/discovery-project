@@ -1,17 +1,24 @@
+import React from "react";
+import { Suspense } from "react";
+import { Switch, Route } from "react-router-dom";
+
 import "./App.scss";
-// import Container from "../src/components/container";
-import Hero from "../src/components/hero";
-import Footer from "../src/components/footer";
-import Subscription from "./components/subscription";
-import Collection from "./components/collection";
+
+import MainPage from "./pages/mainPage";
+import PhotoPage from "./pages/photoPage";
+
 function App() {
   return (
-    <>
-      <Hero />
-      <Collection />
-      <Subscription />
-      <Footer />
-    </>
+    <Switch>
+      <Suspense fallback={"Loading"}>
+        <Route exact path="/photos">
+          <MainPage />
+        </Route>
+        <Route exact path="/photos/:photoID">
+          <PhotoPage />
+        </Route>
+      </Suspense>
+    </Switch>
   );
 }
 
