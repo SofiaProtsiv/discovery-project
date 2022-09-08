@@ -1,0 +1,26 @@
+// colors
+$main-color: #28272a;
+$accent-color: #fde251;
+
+// text colors
+$white-color: #ffffff;
+$black-color: #000000;
+$grey-color: #464b4c;
+$light-grey-color: #f7f7f7;
+$dark-grey-color: #f7f7f74f;
+$red-color: #ff001b;
+
+// font
+$base-font: "Roboto", sans-serif;
+
+//breakpoints
+$mobile: 320px;
+$mobile-max: 767px;
+$tablet: 768px;
+$table-max: 1023px;
+$desktop: 1024px;
+$desktop-max: 1280px;
+
+// transition properties
+$time: 250ms;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);

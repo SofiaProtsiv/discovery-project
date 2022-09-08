@@ -1,0 +1,31 @@
+@import "../../assets/variables.scss";
+
+.container {
+  width: 100vw;
+  margin: 0 auto;
+
+  @media screen and (min-width: $mobile) and (max-width: $mobile-max) {
+    min-width: $mobile;
+    padding: 0 50px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+    padding: 0 75px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+    padding: 0 71px;
+  }
+  @media screen and (min-width: $desktop-max) {
+    width: $desktop-max;
+    padding: 0 71px;
+  }
+}
+
+.section {
+  padding: 20px 0;
+
+  @media screen and (min-width: $tablet) {
+    padding: 30px 0;
+  }
+}

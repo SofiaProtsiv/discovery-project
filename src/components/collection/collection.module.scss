@@ -1,0 +1,135 @@
+@import "../../assets/variables.scss";
+.section {
+  background-color: $main-color;
+  background-image: linear-gradient(to bottom, transparent, #28272a),
+    url("../../assets/mountains-bg.jpg");
+  background-repeat: no-repeat;
+
+  padding: 20px 0;
+
+  @media screen and (min-width: $tablet) {
+    padding: 30px 0;
+  }
+}
+.container {
+  width: 100vw;
+  margin: 0 auto;
+
+  @media screen and (min-width: $mobile) and (max-width: $mobile-max) {
+    min-width: $mobile;
+    padding: 0 35px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+    padding: 0 70px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+    padding: 0 40px 0 120px;
+  }
+  @media screen and (min-width: $desktop-max) {
+    width: $desktop-max;
+    padding: 0 50px 0 150px;
+  }
+}
+
+.descriptionWrapper {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+    width: 250px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: block;
+    width: 500px;
+  }
+  @media screen and (min-width: $desktop-max) {
+    width: 600px;
+  }
+}
+.item {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
+  @media screen and (min-width: $tablet) {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $dark-grey-color;
+    padding: 70px 0;
+  }
+  &:first-child {
+    padding-top: 0;
+  }
+  &:last-child {
+    border: none;
+  }
+  &:last-child:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid $dark-grey-color;
+    width: 110%;
+  }
+}
+.image {
+  width: 300px;
+  height: 300px;
+}
+.title {
+  color: $white-color;
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+.header {
+  text-align: center;
+  @media screen and (min-width: $tablet) {
+    text-align: start;
+  }
+}
+.subtitle {
+  color: $white-color;
+  font-size: 14px;
+  margin-bottom: 100px;
+  @media screen and (min-width: $tablet) {
+    width: 500px;
+  }
+}
+.name {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: capitalize;
+  color: $white-color;
+}
+.tags {
+  margin-bottom: 20px;
+  color: $light-grey-color;
+  opacity: 0.4;
+  text-transform: capitalize;
+  font-size: 12px;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+  }
+}
+.description {
+  margin-bottom: 20px;
+  color: $white-color;
+  font-size: 11px;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+  }
+}
+.item button {
+  position: absolute;
+  bottom: 70px;
+}

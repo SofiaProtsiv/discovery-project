@@ -1,0 +1,46 @@
+@import "../../assets/variables.scss";
+
+.container {
+  padding: 5px 0;
+  background-color: $accent-color;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 900;
+  @media screen and (min-width: $tablet) {
+    font-size: 26px;
+  }
+}
+.span {
+  font-size: 8px;
+  font-weight: 900;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+  }
+}
+.iconWrapper {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (min-width: $tablet) {
+    width: 120px;
+  }
+}
+.icon {
+  fill: $main-color;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  @media screen and (min-width: $tablet) {
+    width: 18px;
+    height: 18px;
+  }
+}

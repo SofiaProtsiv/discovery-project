@@ -1,22 +1,17 @@
-import "./App.css";
-
+import "./App.scss";
+// import Container from "../src/components/container";
+import Hero from "../src/components/hero";
+import Footer from "../src/components/footer";
+import Subscription from "./components/subscription";
+import Collection from "./components/collection";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Hero />
+      <Collection />
+      <Subscription />
+      <Footer />
+    </>
   );
 }
 
