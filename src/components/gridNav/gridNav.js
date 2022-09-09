@@ -18,6 +18,7 @@ export default function GridNav() {
     dispatch(fetchPhotos());
   }
   function handleChange(e) {
+    dispatch(setPage(1));
     dispatch(setOrderBy(e.target.value));
     dispatch(fetchPhotos());
   }

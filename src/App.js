@@ -11,7 +11,7 @@ function App() {
   return (
     <Switch>
       <Suspense fallback={"Loading"}>
-        <Route exact path="/photos">
+        <Route exact path="/">
           <MainPage />
         </Route>
         <Route exact path="/photos/:photoID">
