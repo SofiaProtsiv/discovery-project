@@ -2,6 +2,7 @@ import style from "./gridItem.module.scss";
 import ImageListItem from "@mui/material/ImageListItem";
 import { gridPattern } from "../../assets/gridPattern";
 import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
 import Skeleton from "@mui/material/Skeleton";
 
 export default function GridItem({ src, alt, userName, userBio, index }) {
@@ -29,7 +30,15 @@ export default function GridItem({ src, alt, userName, userBio, index }) {
           animation="wave"
         />
       ) : (
-        <img alt={alt} src={src} className={style.image} />
+        <motion.img
+          initial={{ x: 150, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: -150, opacity: 0 }}
+          transition={{ type: "spring", stiffness: 50 }}
+          alt={alt}
+          src={src}
+          className={style.image}
+        />
       )}
 
       <div className={style.overlay}>

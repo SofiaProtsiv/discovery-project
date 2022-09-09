@@ -3,12 +3,14 @@ import style from "./grid.module.scss";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPhotos } from "../../redux/collectionSlice";
-import ImageList from "@mui/material/ImageList";
 import SkeletonGridItem from "../gridItem/skeletonGridItem";
 import Container from "../container";
 import GridItem from "../gridItem";
 import GridNav from "../gridNav";
 import { gridPattern } from "../../assets/gridPattern";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Grid() {
   const dispatch = useDispatch();
@@ -32,7 +34,7 @@ export default function Grid() {
           </div>
           <div className={style.wrapperGrid}>
             <GridNav />
-            <ImageList variant="quilted" cols={3} rowHeight={250} gap={50}>
+            <div className={style.grid}>
               {photos.length > 0
                 ? photos.map((photo, index) => (
                     <GridItem
@@ -48,7 +50,7 @@ export default function Grid() {
                 : gridPattern.map((photo, index) => (
                     <SkeletonGridItem key={index} index={index} />
                   ))}
-            </ImageList>
+            </div>
           </div>
         </div>
       </Container>

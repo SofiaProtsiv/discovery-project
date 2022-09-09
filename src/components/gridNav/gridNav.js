@@ -40,18 +40,26 @@ export default function GridNav() {
           &#10095;
         </button>
       </div>
+      <span className={style.separatorLong}></span>
       <p className={style.page}>{current_page}/3</p>
-      <label htmlFor="sort_by">sort by</label>
-      <select
-        name="sort_by"
-        value={order_by}
-        className={style.select}
-        onChange={handleChange}
-      >
-        <option value="latest">Latest</option>
-        <option value="oldest">Oldest</option>
-        <option value="popular">Popular</option>
-      </select>
+      <span className={style.separatorMedium}></span>
+      <div className={style.wrapperSelect}>
+        <label htmlFor="sort_by" className={style.label}>
+          sort by &#8964;
+        </label>
+        <select
+          name="sort_by"
+          value={order_by}
+          className={style.select}
+          onChange={handleChange}
+        >
+          <option value="latest">Latest</option>
+          <option value="oldest">Oldest</option>
+          <option value="popular">Popular</option>
+        </select>
+      </div>
+
+      <span className={style.separatorShort}></span>
     </div>
   );
 }
