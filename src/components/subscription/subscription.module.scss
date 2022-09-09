@@ -1,7 +1,6 @@
 @import "../../assets//variables.scss";
 .section {
   background-color: $main-color;
-  padding-bottom: 230px;
 
   @media screen and (min-width: $tablet) {
     padding-bottom: 50px;

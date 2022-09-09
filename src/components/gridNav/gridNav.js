@@ -30,14 +30,14 @@ export default function GridNav() {
           type="button"
           onClick={handlePrevious}
         >
-          &lt;
+          &#10094;
         </button>
         <button
           disabled={current_page === 3 ? 1 : 0}
           type="button"
           onClick={handleNext}
         >
-          &gt;
+          &#10095;
         </button>
       </div>
       <p className={style.page}>{current_page}/3</p>
@@ -46,7 +46,6 @@ export default function GridNav() {
         name="sort_by"
         value={order_by}
         className={style.select}
-        defaultValue="latest"
         onChange={handleChange}
       >
         <option value="latest">Latest</option>

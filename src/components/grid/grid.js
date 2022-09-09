@@ -9,6 +9,7 @@ import Container from "../container";
 import GridItem from "../gridItem";
 import GridNav from "../gridNav";
 import { gridPattern } from "../../assets/gridPattern";
+
 export default function Grid() {
   const dispatch = useDispatch();
 

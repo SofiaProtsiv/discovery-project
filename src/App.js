@@ -6,6 +6,7 @@ import "./App.scss";
 
 import MainPage from "./pages/mainPage";
 import PhotoPage from "./pages/photoPage";
+import GalleryPage from "./pages/galleryPage";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
       <Suspense fallback={"Loading"}>
         <Route exact path="/">
           <MainPage />
+        </Route>
+        <Route exact path="/photos">
+          <GalleryPage />
         </Route>
         <Route exact path="/photos/:photoID">
           <PhotoPage />

@@ -1,0 +1,32 @@
+@import "../../assets/variables.scss";
+
+.navContainer {
+  position: relative;
+  display: flex;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: 900px;
+  color: $light-grey-color;
+}
+.page {
+  position: relative;
+  color: $light-grey-color;
+  font-size: 12px;
+  font-weight: 900px;
+}
+.separatorLong {
+  margin: 0 25px;
+  width: 70%;
+  height: 2px;
+  background-color: $grey-color;
+}
+.separatorShort {
+  margin: 0 0 0 20px;
+  width: 5%;
+  height: 2px;
+  background-color: $grey-color;
+}

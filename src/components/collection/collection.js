@@ -11,9 +11,9 @@ export default function Collection() {
 
   let photos = useSelector((state) => state.collection.collectionPhotos);
 
-  // useEffect(() => {
-  //   dispatch(fetchPhotosCollection());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchPhotosCollection());
+  }, [dispatch]);
 
   return (
     <div className={style.section}>

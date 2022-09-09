@@ -1,1 +1,1 @@
-export { default } from './featuredSpots';
+export { default } from "./featuredSpots";
