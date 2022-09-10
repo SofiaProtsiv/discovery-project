@@ -15,10 +15,11 @@
 .wrapper {
   position: absolute;
   top: 30%;
-  left: 25%;
+  left: 10%;
   right: 10%;
   @media screen and (min-width: $tablet) {
     right: 0;
+    left: 25%;
     width: 500px;
   }
 }

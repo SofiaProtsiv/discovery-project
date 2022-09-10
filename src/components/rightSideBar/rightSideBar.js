@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import style from "./rightSideBar.module.scss";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
@@ -61,10 +61,6 @@ export default function RightSideBar() {
       >
         trppd _
       </motion.button>
-      {/* <Link to="/photos/" className={style.link}>
-        My Collection
-      </Link>
-      <p className={style.userName}>User Name</p> */}
     </React.Fragment>
   );
 }
