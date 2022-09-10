@@ -1,6 +1,6 @@
 import Container from "../container";
 
 function Hero() {
-  return <Container></Container>;
+  return;
 }
 export default Hero;

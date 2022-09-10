@@ -4,8 +4,10 @@ import { gridPattern } from "../../assets/gridPattern";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 import Skeleton from "@mui/material/Skeleton";
+import { ReactComponent as UnspashIcon } from "../../assets/unsplash.svg";
+import { Link } from "react-router-dom";
 
-export default function GridItem({ src, alt, userName, userBio, index }) {
+export default function GridItem({ src, alt, userPortfolio, index }) {
   let status = useSelector((state) => state.collection.status);
 
   return (
@@ -43,7 +45,9 @@ export default function GridItem({ src, alt, userName, userBio, index }) {
 
       <div className={style.overlay}>
         <div className={style.textWrapper}>
-          <p className={style.userName}>{userName}</p>
+          <a href={userPortfolio}>
+            <UnspashIcon alt="Unspash Icon" className={style.icon} />
+          </a>
         </div>
       </div>
     </ImageListItem>

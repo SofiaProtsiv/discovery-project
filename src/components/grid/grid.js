@@ -20,7 +20,7 @@ export default function Grid() {
   useEffect(() => {
     dispatch(fetchPhotos());
   }, [dispatch]);
-
+  console.log(photos);
   return (
     <section className={style.section}>
       <Container>
@@ -42,8 +42,7 @@ export default function Grid() {
                       id={photo.id}
                       src={photo.urls.regular}
                       alt={photo.description}
-                      userName={photo.user.name}
-                      userBio={photo.user.bio}
+                      userPortfolio={photo.user.portfolio_url}
                       index={index}
                     />
                   ))

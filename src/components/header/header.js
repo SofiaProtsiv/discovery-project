@@ -1,12 +1,13 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import Container from "../container";
+import style from "./header.module.scss";
+import RightSideBar from "../rightSideBar";
 
-function Hero() {
+export default function Header() {
   return (
-    <Container>
-      <h1>trppd _</h1>
+    <header className={style.header}>
+      <RightSideBar />
       <Link to="/photos/"></Link>
-    </Container>
+    </header>
   );
 }
-export default Hero;
