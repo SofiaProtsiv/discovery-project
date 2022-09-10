@@ -1,7 +1,8 @@
-import style from "./about.module.scss";
-import { useSelector } from "react-redux";
 import imageSea from "../../assets/aboutSea.jpeg";
 import Button from "../button";
+
+import style from "./about.module.scss";
+
 export default function About() {
   return (
     <section className={style.section}>

@@ -1,10 +1,13 @@
-import style from "./collection.module.scss";
-import Button from "../button";
-import SkeletonCollection from "./skeletonCollection";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+
+import Button from "../button";
+import SkeletonCollection from "./skeletonCollection";
+
 import { fetchPhotosCollection } from "../../redux/collectionSlice";
+
+import style from "./collection.module.scss";
 
 export default function Collection() {
   const dispatch = useDispatch();
@@ -28,7 +31,7 @@ export default function Collection() {
         </div>
         <ul className={style.list}>
           {photos.length > 0 ? (
-            photos.map((photo) => (
+            photos.slice(0, 3).map((photo) => (
               <li className={style.item} key={photo.cover_photo.id}>
                 <div className={style.descriptionWrapper}>
                   <p className={style.name}>{photo.title}</p>

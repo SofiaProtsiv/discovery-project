@@ -1,22 +1,21 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import style from "./rightSideBar.module.scss";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 
 const variants = {
   open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: "-100%" },
+  closed: { opacity: 0, x: 0 },
   transition: { duration: 2 },
 };
 export default function RightSideBar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   if (isOpen) {
     document.body.style.overflow = "hidden";
   } else {
     document.body.style.overflow = "visible";
   }
-
   return (
     <React.Fragment>
       <motion.nav
@@ -57,12 +56,15 @@ export default function RightSideBar() {
       </motion.nav>
       <motion.button
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
         className={style.button}
       >
         trppd _
       </motion.button>
+      {/* <Link to="/photos/" className={style.link}>
+        My Collection
+      </Link>
+      <p className={style.userName}>User Name</p> */}
     </React.Fragment>
   );
 }

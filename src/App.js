@@ -2,9 +2,10 @@ import React from "react";
 import { useEffect, Suspense, lazy } from "react";
 import { Switch, Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
+
 import "./App.scss";
-import PrivateRoute from "./components/routes/privateRoute";
-import PublicRoute from "./components/routes/publicRoute";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const MainPage = lazy(() => import("./pages/mainPage"));
 const PhotoPage = lazy(() => import("./pages/photoPage"));
@@ -18,23 +19,23 @@ function App() {
   return (
     <Switch>
       <Suspense fallback={"Loading"}>
-        <PublicRoute exact path="/">
+        <Route exact path="/">
           <MainPage />
-        </PublicRoute>
-        <PrivateRoute exact path="/photos">
+        </Route>
+        <Route exact path="/photos">
           <GalleryPage />
-        </PrivateRoute>
-        <PrivateRoute exact path="/photos/:photoID">
+        </Route>
+        <Route exact path="/photos/:photoID">
           <PhotoPage />
-        </PrivateRoute>
-        <PublicRoute exact path="/register" restricted>
-          {/* <RegisterView /> */}
+        </Route>
+        {/* <Route exact path="/register" restricted>
+
           hello
-        </PublicRoute>
-        <PublicRoute exact path="/login" redirectTo="/" restricted>
-          {/* <LoginView /> */}
+        </Route>
+        <Route exact path="/login" redirectTo="/" restricted>
+
           login
-        </PublicRoute>
+        </Route> */}
       </Suspense>
     </Switch>
   );

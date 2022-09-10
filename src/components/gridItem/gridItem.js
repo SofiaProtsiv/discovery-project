@@ -1,11 +1,13 @@
-import style from "./gridItem.module.scss";
+import { useSelector } from "react-redux";
+
 import ImageListItem from "@mui/material/ImageListItem";
 import { gridPattern } from "../../assets/gridPattern";
-import { useSelector } from "react-redux";
-import { motion } from "framer-motion";
 import Skeleton from "@mui/material/Skeleton";
 import { ReactComponent as UnspashIcon } from "../../assets/unsplash.svg";
-import { Link } from "react-router-dom";
+
+import { motion } from "framer-motion";
+
+import style from "./gridItem.module.scss";
 
 export default function GridItem({ src, alt, userPortfolio, index }) {
   let status = useSelector((state) => state.collection.status);

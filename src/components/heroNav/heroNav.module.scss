@@ -1,0 +1,58 @@
+@import "../../assets/variables.scss";
+.wrapper {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    width: 52%;
+    right: 15%;
+  }
+  @media screen and (min-width: $desktop-max) {
+    width: 70%;
+    right: 0;
+  }
+}
+.navContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: 900px;
+  color: $light-grey-color;
+}
+.page {
+  position: relative;
+  color: $light-grey-color;
+  font-size: 12px;
+  font-weight: 900px;
+}
+.separatorLong {
+  margin: 0 20px;
+  width: 50%;
+  height: 2px;
+  background-color: $grey-color;
+}
+.separatorShort {
+  margin: 0 20px;
+  width: 5%;
+  height: 2px;
+  background-color: $grey-color;
+}
+.buttonsWrapper {
+  display: flex;
+  margin-right: 20px;
+}
+.buttonsWrapper button {
+  padding: 9px 14px;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 900;
+  border: none;
+  &:first-child {
+    margin-right: 10px;
+  }
+}

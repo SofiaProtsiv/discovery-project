@@ -1,18 +1,15 @@
-import React from "react";
-import style from "./featuredSpots.module.scss";
-import Container from "../container";
-import FeaturedSpotsNav from "../featuredSpotsNav";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchPhotosByQuery } from "../../redux/searchSlice";
 import { Link } from "react-router-dom";
 
-import Slider from "react-slick";
+import style from "./featuredSpots.module.scss";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
+import Container from "../container";
+import FeaturedSpotsNav from "../featuredSpotsNav";
 import Settings from "../../assets/sliderSettings";
+import { fetchPhotosByQuery } from "../../redux/searchSlice";
+
+import Slider from "react-slick";
 
 export default function FeaturedSpots() {
   const dispatch = useDispatch();

@@ -13,7 +13,7 @@ export default function MainPage() {
   return (
     <React.Fragment>
       <Header />
-      {/* <Hero /> */}
+      <Hero />
       <FeaturedSpots />
       <About />
       <Grid />

@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
 import { fetchPhotoById } from "../../redux/collectionSlice";

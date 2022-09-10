@@ -23,7 +23,7 @@ export const fetchPhotosByQuery = createAsyncThunk(
   }
 );
 
-export const collectionSlice = createSlice({
+export const searchSlice = createSlice({
   name: "search",
   initialState,
   reducers: {
@@ -55,6 +55,6 @@ export const collectionSlice = createSlice({
 });
 
 export const { setPhotos, setQuery, setCurrentPage, setPerPage } =
-  collectionSlice.actions;
+  searchSlice.actions;
 
-export default collectionSlice.reducer;
+export default searchSlice.reducer;

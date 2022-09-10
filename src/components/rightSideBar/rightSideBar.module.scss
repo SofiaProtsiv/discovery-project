@@ -5,7 +5,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
   @media screen and (min-width: $tablet) {
     width: 300px;
   }
@@ -16,9 +16,9 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background: rgba(97, 97, 97, 1);
+  background: $main-color;
   @media screen and (min-width: $tablet) {
-    background: rgba(97, 97, 97, 0.2);
+    background: #28272ac7;
   }
 }
 .list {
@@ -47,7 +47,7 @@
   font-weight: 800;
 }
 .button {
-  position: fixed;
+  position: absolute;
   outline: none;
   top: 0;
   left: 0;
@@ -60,7 +60,7 @@
   color: $main-color;
   background-color: $accent-color;
   border: none;
-  z-index: 3;
+  z-index: 1;
   @media screen and (min-width: $tablet) {
     width: 360px;
   }

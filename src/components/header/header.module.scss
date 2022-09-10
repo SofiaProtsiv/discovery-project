@@ -1,4 +1,13 @@
 @import "../../assets/variables.scss";
 .header {
-  background-color: $main-color;
+  position: absolute;
+}
+.link {
+  position: absolute;
+  right: 0;
+  color: red;
+  padding-left: 20px;
+  border-left: 1px solid $white-color;
+}
+.userName {
 }

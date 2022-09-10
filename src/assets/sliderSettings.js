@@ -6,8 +6,9 @@ export default function Settings() {
   const dispatch = useDispatch();
 
   const [count, setCount] = useState(0);
+
   let current_page = useSelector((state) => state.search.current_page);
-  console.log(current_page);
+
   const settings = {
     dots: false,
     arrows: false,
@@ -64,5 +65,6 @@ export default function Settings() {
       },
     ],
   };
+
   return settings;
 }

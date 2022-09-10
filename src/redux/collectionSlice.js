@@ -26,20 +26,12 @@ export const fetchPhotosCollection = createAsyncThunk(
   "fetchPhotosCollection",
   async (_, { rejectWithValue, dispatch }) => {
     const response = await unsplashAPI.get(
-      `/search/collections?query=mountain&per_page=3}`
+      `/search/collections?query=mountain`
     );
     dispatch(setCollectionPhotos(response.data.results));
   }
 );
-export const fetchPhotosByQuery = createAsyncThunk(
-  "fetchPhotosCollection",
-  async (query, page, per_page, { rejectWithValue, dispatch }) => {
-    const response = await unsplashAPI.get(
-      `/search/photos?query=${query}&per_page=${per_page}&page=${page}}`
-    );
-    dispatch(setCollectionPhotos(response.data.results));
-  }
-);
+
 export const fetchPhotoById = createAsyncThunk(
   "fetchPhotoById",
   async (photoID, { rejectWithValue, dispatch }) => {
@@ -47,7 +39,7 @@ export const fetchPhotoById = createAsyncThunk(
     dispatch(setCurrentPhoto(response.data));
   }
 );
-
+console.log(initialState.collectionPhotos);
 export const collectionSlice = createSlice({
   name: "collection",
   initialState,
