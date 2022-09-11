@@ -4,6 +4,7 @@
   position: relative;
   width: 100vw;
   margin: 0 auto;
+  z-index: 2;
 
   @media screen and (min-width: $mobile) and (max-width: $mobile-max) {
     min-width: $mobile;
