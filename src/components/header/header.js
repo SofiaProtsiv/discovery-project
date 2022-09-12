@@ -7,10 +7,13 @@ export default function Header() {
   return (
     <header className={style.header}>
       <RightSideBar />
-      {/* <Link to="/photos/" className={style.link}>
-        My Collection
-      </Link>
-      <p className={style.userName}>User Name</p> */}
+      <div className={style.wrapper}>
+        <Link to="/photos/" className={style.link}>
+          My Collection
+        </Link>
+        <p className={style.userName}>Sofia Protsiv</p>
+        <span className={style.avatar}></span>
+      </div>
     </header>
   );
 }

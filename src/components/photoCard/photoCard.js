@@ -5,7 +5,7 @@ import { fetchPhotoById } from "../../redux/collectionSlice";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 
-import style from "./photoCard.module.scss";
+// import style from "./photoCard.module.scss";
 
 export default function PhotoCard() {
   const dispatch = useDispatch();

@@ -1,7 +1,5 @@
 import style from "./subscription.module.scss";
-import Container from "../container";
 import Button from "../button";
-import MapImage from "../../assets/map.png";
 
 export default function Subscription() {
   return (

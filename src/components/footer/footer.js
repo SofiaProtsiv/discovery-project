@@ -1,8 +1,8 @@
 import style from "./footer.module.scss";
 
-import { ReactComponent as InstagramIcon } from "../../assets/instagram.svg";
-import { ReactComponent as FacebookIcon } from "../../assets/facebook.svg";
-import { ReactComponent as TwitterIcon } from "../../assets/twitter.svg";
+import { ReactComponent as InstagramIcon } from "../../images/instagram.svg";
+import { ReactComponent as FacebookIcon } from "../../images/facebook.svg";
+import { ReactComponent as TwitterIcon } from "../../images/twitter.svg";
 
 export default function Footer() {
   return (

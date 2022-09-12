@@ -1,4 +1,4 @@
-import imageSea from "../../assets/aboutSea.jpeg";
+import imageSea from "../../images/aboutSea.jpeg";
 import Button from "../button";
 
 import style from "./about.module.scss";

@@ -1,12 +1,47 @@
 @import "../../assets/variables.scss";
 .header {
+  position: relative;
+}
+.wrapper {
+  position: absolute;
+  right: 50px;
+  display: flex;
+
+  align-items: center;
+  padding: 30px 0;
+
+  z-index: 1;
+  @media screen and (max-width: $mobile-max) {
+    display: none;
+  }
+  @media screen and (min-width: $desktop-max) {
+    right: 10%;
+  }
 }
 .link {
-  position: absolute;
-  right: 0;
-  color: red;
-  padding-left: 20px;
-  border-left: 1px solid $white-color;
+  padding-right: 30px;
+  font-size: 14px;
+  font-weight: 900;
+  border-right: 1px solid $white-color;
+  color: $white-color;
+  @media screen and (min-width: $desktop) {
+    padding-right: 60px;
+  }
 }
 .userName {
+  margin-left: 30px;
+  font-size: 14px;
+  font-weight: 900;
+  color: $white-color;
+  margin-right: 20px;
+  @media screen and (min-width: $desktop) {
+    margin-left: 60px;
+  }
+}
+.avatar {
+  background-size: contain;
+  background-image: url("../../images/noImage.png");
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }

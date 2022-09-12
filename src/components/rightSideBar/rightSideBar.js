@@ -1,7 +1,9 @@
-import { NavLink } from "react-router-dom";
-import style from "./rightSideBar.module.scss";
-import { motion } from "framer-motion";
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+
+import { motion } from "framer-motion";
+
+import style from "./rightSideBar.module.scss";
 
 const variants = {
   open: { opacity: 1, x: 0 },

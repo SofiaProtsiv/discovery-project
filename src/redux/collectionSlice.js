@@ -16,8 +16,10 @@ export const fetchPhotos = createAsyncThunk(
   async (_, { rejectWithValue, dispatch, getState }) => {
     let page = getState().collection.current_page;
     let order_by = getState().collection.order_by;
+    let per_page = getState().collection.per_page;
+
     const response = await unsplashAPI.get(
-      `/photos?per_page=${initialState.per_page}&page=${page}&order_by=${order_by}`
+      `/photos?per_page=${per_page}&page=${page}&order_by=${order_by}`
     );
     dispatch(setPhotos(response.data));
   }
@@ -39,7 +41,7 @@ export const fetchPhotoById = createAsyncThunk(
     dispatch(setCurrentPhoto(response.data));
   }
 );
-console.log(initialState.collectionPhotos);
+
 export const collectionSlice = createSlice({
   name: "collection",
   initialState,

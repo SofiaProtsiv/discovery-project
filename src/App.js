@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { Suspense, lazy } from "react";
 import { Switch, Route } from "react-router-dom";
 
@@ -13,36 +13,19 @@ const PhotoPage = lazy(() => import("./pages/photoPage"));
 const GalleryPage = lazy(() => import("./pages/galleryPage"));
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isPageLoaded, setIsPageLoaded] = useState(false); //this helps
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-  useEffect(() => {
-    if (isLoaded) {
-      setIsPageLoaded(true);
-    }
-  }, [isLoaded]);
-
   return (
     <Switch>
-      {isPageLoaded ? (
-        <Suspense fallback={<Loader />}>
-          <Route exact path="/">
-            <MainPage />
-          </Route>
-          <Route exact path="/photos">
-            <GalleryPage />
-          </Route>
-          <Route exact path="/photos/:photoID">
-            <PhotoPage />
-          </Route>
-        </Suspense>
-      ) : (
-        <Loader />
-      )}
+      <Suspense fallback={<Loader />}>
+        <Route exact path="/">
+          <MainPage />
+        </Route>
+        <Route exact path="/photos">
+          <GalleryPage />
+        </Route>
+        <Route exact path="/photos/:photoID">
+          <PhotoPage />
+        </Route>
+      </Suspense>
     </Switch>
   );
 }

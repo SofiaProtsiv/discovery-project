@@ -20,7 +20,7 @@ export default function Grid() {
   useEffect(() => {
     dispatch(fetchPhotos());
   }, [dispatch]);
-  console.log(photos);
+
   return (
     <section className={style.section}>
       <Container>

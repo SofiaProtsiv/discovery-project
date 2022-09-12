@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import ImageListItem from "@mui/material/ImageListItem";
 import { gridPattern } from "../../assets/gridPattern";
 import Skeleton from "@mui/material/Skeleton";
-import { ReactComponent as UnspashIcon } from "../../assets/unsplash.svg";
+import { ReactComponent as UnspashIcon } from "../../images/unsplash.svg";
 
 import { motion } from "framer-motion";
 
